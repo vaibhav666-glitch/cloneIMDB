@@ -13,7 +13,7 @@ function loadFavorites() {
 favoriteArr = loadFavorites();
 async function loadMovies(searchTerm) {
   try {
-    const response = await fetch(`http://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=9d5b69f2`);
+    const response = await fetch(`https://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=9d5b69f2`);
     if (!response.ok) {
       throw new Error('Network response was not okay.');
     }

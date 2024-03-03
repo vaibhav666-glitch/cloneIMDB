@@ -119,10 +119,7 @@ function saveFavorites() {
   localStorage.setItem('favoriteArr', JSON.stringify(favoriteArr));
 }
 
-// function loadFavorites() {
-//   const favorites = localStorage.getItem('favoriteArr');
-//   return favorites ? JSON.parse(favorites) : [];
-// }
+
 
 function displayFavorites() {
   const favorites = loadFavorites();

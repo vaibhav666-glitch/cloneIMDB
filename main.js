@@ -43,20 +43,13 @@ function displayMovieList(movies) {
     movieListItem.classList.add('search-list-item');
     let favoriteButton = document.createElement('button');
     favoriteButton.id = 'star';
-    favoriteButton.innerHTML = `<div>*</div>`;
+    favoriteButton.innerHTML = `<div><i class="fa-solid fa-star"></i></div>`;
     favoriteButton.addEventListener('click', (event) => {
       event.stopPropagation();
       const imdbID = movies[i].imdbID;
-
+        addToFavorite(imdbID);
       // Check if the movie is already in favorites
-      const index = favoriteArr.indexOf(imdbID);
-      if (index !== -1) {
-          // Remove from favorites
-          favoriteArr.splice(index, 1);
-      } else {
-          // Add to favorites
-          favoriteArr.push(imdbID);
-      }
+      
     });
     movieListItem.addEventListener('click', () => {
       window.location.href = `MoviePage.html?movieID=${movies[i].imdbID}`;
@@ -135,7 +128,9 @@ function displayFavorites() {
         <div class="movie-poster">
           <img src="${movieDetails.Poster}">
         </div>
+        
         <div class="movie-info">
+        <h3 class="movie-title" id="remove-fav" onclick="removeFromFavorite('${movieDetails.imdbID}', this)"><i class="fa-solid fa-star"></i></h3>
           <h3 class="movie-title">${movieDetails.Title}</h3>
           <ul class="movie-misc-info">
             <li class="year"><b>Year: </b>${movieDetails.Year}</li>
@@ -144,11 +139,34 @@ function displayFavorites() {
           </ul>
         </div>`;
         favoriteContainer.appendChild(movieContainer);
+        
     })
     .catch(error => {
       console.error(error);
     });
   });
+}
+function addToFavorite(imdbID)
+{
+    console.log(imdbID);
+    const index = favoriteArr.indexOf(imdbID);
+      if (index !== -1) {
+          // Remove from favorites
+          favoriteArr.splice(index, 1);
+      } else {
+          // Add to favorites
+          favoriteArr.push(imdbID);
+      }
+}
+
+function removeFromFavorite(imdbID, element)
+{
+    const index = favoriteArr.indexOf(imdbID);
+      if (index !== -1) {
+          // Remove from favorites
+          favoriteArr.splice(index, 1);
+      }
+      element.closest('.movie-container').remove();
 }
 
 window.addEventListener('beforeunload', saveFavorites);

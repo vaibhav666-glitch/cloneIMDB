@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  
+</head>
+<body>
+  
+  <div class="wrapper">
+    <!--logo-->
+    <div class="logo">
+      <div class="container">
+        <p>.IM<span>DB.</span></p>
+      </div>
+    </div>
+    <!--end of logo-->
+<!--search container-->
+    <div class="search-container">
+      <div class="search-element">
+        <h3> Search Movie:</h3>
+        <input type="'text" class="form-control" placeholder="Search Movie Title ..." id="movie-search-box" onkeyup="findMovies()" onclick="findMovies()">
+        <div class="search-list" id="search-list">
+        </div>
+      </div>  
+    </div>
+<!--end of search of container-->
+
+<!--result container-->
+<div class="container">
+  <div class="result-container">
+    <div class="result-grid" id="result-grid">
+      <!--movie-information-->
+   
+    </div>
+  </div>
+</div>
+<!--end of result container-->
+
+  </div>
+  <script src='main.js'></script>
+</body>
+</html>

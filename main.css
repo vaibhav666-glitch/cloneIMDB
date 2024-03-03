@@ -32,6 +32,8 @@ img{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 .search-container{
@@ -45,6 +47,7 @@ img{
     padding: 1rem 0;
     border-bottom: 1px solid var(--light-dark-color);
     
+    
 }
 .logo p{
     font-size: 2rem;
@@ -53,6 +56,16 @@ img{
 }
 .logo p span{
     color: var(--yellow-color);
+}
+.home{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+.favorite{
+    font-size: 2rem;
+    color: var(--yellow-color);
+    font-weight: bold;
 }
 .search-element{
     display: flex;
@@ -88,6 +101,7 @@ img{
     max-height: 500px;
     overflow-y: scroll;
     z-index: 10;
+    
 }
 .search-list .search-list-item{
     background-color: var(--light-dark-color);
@@ -97,6 +111,18 @@ img{
     color: white;
     cursor:pointer;
     transition: background-color 200ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#star {
+    color: var(--yellow-color);
+    font-size: 3rem;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+#star > div {
+    display: inline-block; /* Align the asterisk horizontally */
 }
 .search-list .search-list-item:hover{
     background-color: #1f1f1f;
@@ -137,6 +163,14 @@ img{
     display:none;
 }
 
+#star{
+    color:var(--yellow-color);
+    font-size: 3rem;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
 .result-container{
     padding: 3rem 0;
 }
@@ -164,6 +198,24 @@ img{
     justify-content: center;
     padding: 1rem;;
  }
+ .favorite-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+ }
+.movie-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+}
+.movie-container .movie-poster img{
+    max-width: 200px;
+    margin: 0 auto;
+    border: 4px solid white;
+}
+
 
  @media(max-width: 450px){
     .logo p{

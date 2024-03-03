@@ -1,38 +1,38 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Page Title</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 </head>
 <body>
-  
   <div class="wrapper">
-    <!--logo-->
     <div class="logo">
       <div class="container">
-        <p>.IM<span>DB.</span></p>
+        <a href="index.html"><p>.IM<span>DB.</span></p></a>
+        <a href="index.html"><div class="home">Home</div></a>
+        <a href="favorite.html"><div class="favorite" >Favorite</div></a>
       </div>
     </div>
-    <!--end of logo-->
-<!--search container-->
+
     <div class="search-container">
       <div class="search-element">
-        <h3> Search Movie:</h3>
-        <input type="'text" class="form-control" placeholder="Search Movie Title ..." id="movie-search-box" onkeyup="findMovies()" onclick="findMovies()">
-        <div class="search-list" id="search-list">
-        </div>
+        <h3>Search Movie:</h3>
+        <input type="text" class="form-control" placeholder="Search Movie Title..." id="movie-search-box" onkeyup="findMovies()" onclick="findMovies()">
+        <div class="search-list" id="search-list"></div>
       </div>  
     </div>
-<!--end of search of container-->
 
-
-
+    <div class="container">
+      <div class="result-container">
+        <div class="result-grid" id="result-grid"></div>
+      </div>
+    </div>
   </div>
-  <script src='main.js'></script>
+
+  <script src="main.js"></script>
+ 
 </body>
 </html>

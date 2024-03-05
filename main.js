@@ -89,6 +89,7 @@ function displayMovieDetails() {
           <img src="${movieDetails.Poster}">
         </div>
         <div class="movie-info">
+       
           <h3 class="movie-title">${movieDetails.Title}</h3>
           <ul class="movie-misc-info">
             <li class="year"><b>Year: </b>${movieDetails.Year}</li>
@@ -130,7 +131,7 @@ function displayFavorites() {
         </div>
         
         <div class="movie-info">
-        <h3 class="movie-title" id="remove-fav" onclick="removeFromFavorite('${movieDetails.imdbID}', this)"><i class="fa-solid fa-star"></i></h3>
+        <h3 class="movie-title" id="remove-fav" onclick="addToFavorite('${movieDetails.imdbID})"><i class="fa-solid fa-star"></i></h3>
           <h3 class="movie-title">${movieDetails.Title}</h3>
           <ul class="movie-misc-info">
             <li class="year"><b>Year: </b>${movieDetails.Year}</li>
